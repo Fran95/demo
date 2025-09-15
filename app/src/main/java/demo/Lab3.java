@@ -17,14 +17,7 @@ public class Lab3 {
      *                  (must be at least as many as the number of homework items)
      * @return the minimum number of hours per day needed to complete all homework
      *
-     *         Example:
-     *         homeworks = [5, 7, 8, 9], days = 5
-     *         Output: 7
-     *
-     *         Explanation:
-     *         - With 5 hours of work per day → not enough (too many days needed).
-     *         - With 7 hours of work per day → possible within 5 days.
-     *         - Answer = 7.
+     *     
      */
 
     int limit;
