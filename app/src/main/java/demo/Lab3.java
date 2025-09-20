@@ -32,6 +32,18 @@ public class Lab3 {
         }
 
         // you fill in here:
+        while(left<right){
+            int mid = left +(right-left)/2;
+            if(homeworks[mid]==mid){
+                return mid;
+            }
+            if(homeworks[mid]>mid){
+                right = mid;
+            }else{
+                left = mid +1;
+            }
+              
+        }
 
         return left;
     }
@@ -66,6 +78,7 @@ public class Lab3 {
         if (left > right) {
             // base case: target not found
             // you fill in here
+           return -1; 
         }
 
         int mid = left + (right - left) / 2;
@@ -73,17 +86,20 @@ public class Lab3 {
         if (arr[mid] == target) {
             // found it
             // you fill in here
+            return mid;
         }
 
         if (arr[mid] > target) {
             // search left half
             // you fill in here
+            left = mid -1;
+            return search(arr, target, left, mid - 1);
         } else {
             // search right half
             // you fill in here
+            right = mid +1;
+            return search(arr, target, mid + 1, right);
         }
-        // IMPORTANT!!! remove the placeholder statement below !!!
-        return -1;
     }
 
     // Simple tester
