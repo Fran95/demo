@@ -91,7 +91,7 @@ public class Lab3 {
         } else {
             // search right half
             // you fill in here
-            return search(arr,target, right, mid +1);
+            return search(arr,target, mid +1, right);
         }
     }
 
