@@ -34,17 +34,12 @@ public class Lab3 {
         // you fill in here:
         while(left<right){
             int mid = left +(right-left)/2;
-            if(homeworks[mid]==mid){
-                return mid;
-            }
-            if(homeworks[mid]>mid){
-                right = mid;
-            }else{
+            if(!check(mid,homeworks)){
                 left = mid +1;
+            }else{
+                right = mid;
             }
-              
-        }
-
+            }
         return left;
     }
 
@@ -92,12 +87,10 @@ public class Lab3 {
         if (arr[mid] > target) {
             // search left half
             // you fill in here
-            left = mid -1;
             return search(arr, target, left, mid - 1);
         } else {
             // search right half
             // you fill in here
-            right = mid +1;
             return search(arr, target, mid + 1, right);
         }
     }
